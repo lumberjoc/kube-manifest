@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: lumberjoc/nodejs:7
+        image: lumberjoc/test:7
         ports:
         - containerPort: 3000
