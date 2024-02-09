@@ -3,23 +3,28 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: flaskdemo
-  name: flaskdemo
+    app: node-app
+  name: node-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: flaskdemo
+      app: node-app
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: flaskdemo
+        app: node-app
     spec:
       containers:
+<<<<<<< Updated upstream
       - image: lumberjoc/test:2
         name: flaskdemo
+=======
+      - image: lumberjoc/test:2
+        name: node-app
+>>>>>>> Stashed changes
         resources: {}
 status: {}
 ---
@@ -33,6 +38,6 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
-    targetPort: 5000
+    targetPort: 8080
   selector:
-    app: flaskdemo
+    app: node-app
