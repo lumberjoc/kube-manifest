@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: volley-node-app
+  name: vna-api-app
   namespace: default
   labels:
-    app: volley-node-app
+    app: vna-api-app
 spec:
   ports:
     - port: 9090
   selector:
-    app: volley-node-app
+    app: vna-api-app

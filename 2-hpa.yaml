@@ -2,13 +2,13 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: volley-node-app
+  name: vna-api-app
   namespace: default
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: volley-node-app
+    name: vna-api-app
   minReplicas: 1
   maxReplicas: 10
   metrics:
