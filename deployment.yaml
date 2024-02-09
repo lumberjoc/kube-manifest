@@ -19,10 +19,10 @@ spec:
     spec:
       containers:
 <<<<<<< Updated upstream
-      - image: lumberjoc/test:4
+      - image: lumberjoc/test:5
         name: flaskdemo
 =======
-      - image: lumberjoc/test:4
+      - image: lumberjoc/test:5
         name: node-app
 >>>>>>> Stashed changes
         resources: {}
