@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: volley-node-app
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: volley-node-app
+  template:
+    metadata:
+      labels:
+        app: volley-node-app
+    spec:
+      containers:
+        - name: volley-node-app
+          image: lumberjoc/volley-node-app:1
+          ports:
+            - name: http
+              containerPort: 8080
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 100m
+            limits:
+              memory: 256Mi
+              cpu: 500m
