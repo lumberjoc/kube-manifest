@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: volley-node-app
-          image: lumberjoc/volley-node-app:17
+          image: lumberjoc/volley-node-app:18
           ports:
             - name: http
               containerPort: 9090
