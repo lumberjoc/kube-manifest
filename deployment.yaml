@@ -1,43 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
-  labels:
-    app: node-app
-  name: node-app
+  name: nodejs-app
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: node-app
-  strategy: {}
+      app: nodejs
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: node-app
+        app: nodejs
     spec:
       containers:
-<<<<<<< Updated upstream
-      - image: lumberjoc/test:4
-        name: flaskdemo
-=======
-      - image: lumberjoc/test:4
-        name: node-app
->>>>>>> Stashed changes
-        resources: {}
-status: {}
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: lb-service
-  labels:
-    app: lb-service
-spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 8080
-  selector:
-    app: node-app
+      - name: nodejs
+        image: lumberjoc/nodejs:1
+        ports:
+        - containerPort: 3000
