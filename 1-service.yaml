@@ -1,13 +1,27 @@
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: vna-api-app
+#   namespace: default
+#   labels:
+#     app: vna-api-app
+# spec:
+#   ports:
+#     - port: 8080
+#   selector:
+#     app: vna-api-app
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: vna-api-app
-  namespace: default
+  name: lb-service
   labels:
-    app: vna-api-app
+    app: lb-service
 spec:
+  type: LoadBalancer
   ports:
-    - port: 8080
+  - port: 80
+    targetPort: 8080
   selector:
     app: vna-api-app
