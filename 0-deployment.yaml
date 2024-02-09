@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: volley-node-app
+  name: vna-api-app
   namespace: default
 spec:
   selector:
     matchLabels:
-      app: volley-node-app
+      app: vna-api-app
   template:
     metadata:
       labels:
-        app: volley-node-app
+        app: vna-api-app
     spec:
       containers:
-        - name: volley-node-app
-          image: lumberjoc/volley-node-app:26
+        - name: vna-api-app
+          image: lumberjoc/vna-api-app:26
           ports:
             - name: http
               containerPort: 9090
