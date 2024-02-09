@@ -8,6 +8,6 @@ metadata:
     app: vna-api-app
 spec:
   ports:
-    - port: 9090
+    - port: 8080
   selector:
     app: vna-api-app
