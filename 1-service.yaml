@@ -2,15 +2,15 @@
 # apiVersion: v1
 # kind: Service
 # metadata:
-#   name: vna-api-app
+#   name: blog-app
 #   namespace: default
 #   labels:
-#     app: vna-api-app
+#     app: blog-app
 # spec:
 #   ports:
 #     - port: 8080
 #   selector:
-#     app: vna-api-app
+#     app: blog-app
 ---
 apiVersion: v1
 kind: Service
@@ -24,4 +24,4 @@ spec:
   - port: 80
     targetPort: 8080
   selector:
-    app: vna-api-app
+    app: blog-app

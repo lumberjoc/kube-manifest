@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vna-api-app
+  name: blog-app
   namespace: default
 spec:
   selector:
     matchLabels:
-      app: vna-api-app
+      app: blog-app
   template:
     metadata:
       labels:
-        app: vna-api-app
+        app: blog-app
     spec:
       containers:
-        - name: vna-api-app
-          image: lumberjoc/vna-api-app:27
+        - name: blog-app
+          image: lumberjoc/blog-app:1
           ports:
             - name: http
               containerPort: 8080
