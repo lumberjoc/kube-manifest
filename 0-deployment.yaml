@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: blog-app
-          image: lumberjoc/blog-app:17
+          image: lumberjoc/blog-app:18
           ports:
             - name: http
               containerPort: 3000
